@@ -15,6 +15,8 @@ dynamodb = boto3.resource("dynamodb")
 TABLE_NAME = os.environ.get("WORKFLOW_TABLE", "workflow_executions")
 table = dynamodb.Table(TABLE_NAME)
 
+print(f"Initialized DynamoDB table: {TABLE_NAME}")
+
 
 def handler(event, context):
     """
