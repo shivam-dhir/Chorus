@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\.venv",
+    "\\env",
     "\\lambdas",
     "\\lambdas\\worker"
   ],
