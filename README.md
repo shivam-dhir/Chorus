@@ -1,4 +1,4 @@
-# Chorus 🎼  
+# Chorus   
 **An Event-Driven Workflow Orchestration Platform (Serverless, AWS)**
 
 **Chorus** is a **backend-first, event-driven workflow orchestration platform** built to understand and implement **real-world cloud architecture, distributed systems patterns, and serverless design**.  
@@ -147,4 +147,4 @@ This separation enables **stateless workers, retries, and scalable orchestration
 
 ## Status
 
-Actively under development — features are added incrementally with a focus on system design and real-world behavior.
+Actively under development, features are added incrementally with a focus on system design and real-world behavior.
