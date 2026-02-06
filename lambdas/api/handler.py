@@ -15,10 +15,16 @@ table = dynamodb.Table(TABLE_NAME)
 
 def handler(event, context):
     logger.info("Create workflow request received")
+    logger.info("Raw event:")
     logger.info(json.dumps(event))
 
     try:
-        body = json.loads(event["body"])
+        # Handle both proxy and non-proxy payloads
+        if "body" in event and event["body"] is not None:
+            body = json.loads(event["body"])
+        else:
+            body = event  # API Gateway test / mapped request
+
         workflow_id = body["workflow_id"]
         definition = body["definition"]
 
@@ -40,10 +46,14 @@ def handler(event, context):
         }
 
     except Exception as e:
+        logger.error("Failed to create workflow")
         logger.error(str(e))
+
         return {
             "statusCode": 400,
             "body": json.dumps({
                 "error": "Invalid workflow payload"
             })
         }
+
+
