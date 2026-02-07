@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\.venv",
-    "\\env",
     "\\lambdas",
-    "\\lambdas\\worker"
+    "\\lambdas\\execute"
   ],
-  "SelectedNode": "\\lambdas\\worker\\handler.py",
+  "SelectedNode": "\\lambdas\\execute\\handler.py",
   "PreviewInSolutionExplorer": false
 }
